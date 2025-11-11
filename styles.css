@@ -1,2 +1,56 @@
 
 /* Your CSS Code here. */
+/* Basic page reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+/* HOLDER: main flex container */
+.holder {
+  display: flex;
+  /* Spread items so there's space between them and first/last touch the container edges */
+  justify-content: space-between;
+  /* Keep items aligned at the top of the row */
+  align-items: flex-start;
+
+  /* Allow wrapping to next line instead of squashing items */
+  flex-wrap: wrap;
+
+  /* Vertical spacing between wrapped rows (gap only affects space between items,
+     with justify-content:space-between the first and last still align to edges) */
+  gap: 20px;
+
+  /* Make holder full width so first & last touch screen edges when no extra page padding */
+  width: 100%;
+  margin: 16px 0;
+}
+
+/* ITEM: individual boxes */
+.item {
+  /* Prevent item from shrinking and fix their base width so they don't squash */
+  flex: 0 0 120px; /* flex: [grow] [shrink] [basis] */
+
+  height: 120px;
+
+  /* content alignment inside item */
+  display: flex;
+  align-items: flex-start;   /* number at top-left like in the example */
+  justify-content: flex-start;
+
+  /* visual */
+  color: black;
+  font-size: 48px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Small responsive tweak: for very small screens make items a bit smaller */
+@media (max-width: 420px) {
+  .item {
+    flex: 0 0 90px;
+    height: 90px;
+    font-size: 36px;
+  }
+}
