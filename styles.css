@@ -1,32 +1,36 @@
-/* Flex container styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
 .holder {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 20px;
+  gap: 10px;
 }
 
-/* Each item box */
 .item {
   width: 100px;
   height: 100px;
   font-size: 40px;
   color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
 }
 
-/* Color variations */
+/* Different colors for illustration */
 .red {
   background-color: red;
 }
 
 .blue {
   background-color: blue;
+  color: white;
 }
 
 .green {
   background-color: green;
+  color: white;
 }
